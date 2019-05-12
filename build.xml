@@ -7,13 +7,13 @@
     <target name="compile">
         <mkdir dir="build/classes"/>
         <javac srcdir="jnius/src" destdir="build/classes"
-               includeantruntime='false' source='1.6' target='1.6' />
+               includeantruntime='false' source='1.7' target='1.7' />
     </target>
 
     <target name="test-compile">
         <mkdir dir="build/test-classes"/>
         <javac srcdir="tests/java-src" destdir="build/test-classes"
-               includeantruntime='false' source='1.6' target='1.6' />
+               includeantruntime='false' source='1.7' target='1.7' />
     </target>
 
     <target name="jar" depends="compile">

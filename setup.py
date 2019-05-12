@@ -92,7 +92,7 @@ def compile_native_invocation_handler(*possible_homes):
     '''Find javac and compile NativeInvocationHandler.java.'''
     javac = find_javac(possible_homes)
     subprocess.check_call([
-        javac, '-target', '1.6', '-source', '1.6',
+        javac, '-target', '1.7', '-source', '1.7',
         join('jnius', 'src', 'org', 'jnius', 'NativeInvocationHandler.java')
     ])
 
@@ -116,7 +116,7 @@ elif PLATFORM == 'darwin':
     if not FRAMEWORK:
         raise Exception('You must install Java on your Mac OS X distro')
 
-    if '1.6' in FRAMEWORK:
+    if '1.7' in FRAMEWORK:
         LIB_LOCATION = '../Libraries/libjvm.dylib'
         INCLUDE_DIRS = [join(
             FRAMEWORK, (
